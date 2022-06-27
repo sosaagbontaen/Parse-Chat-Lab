@@ -18,6 +18,8 @@
 		1A122C11286A0FDD00C86E75 /* Parse_ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A122C10286A0FDD00C86E75 /* Parse_ChatTests.m */; };
 		1A122C1B286A0FDD00C86E75 /* Parse_ChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A122C1A286A0FDD00C86E75 /* Parse_ChatUITests.m */; };
 		1A122C1D286A0FDD00C86E75 /* Parse_ChatUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A122C1C286A0FDD00C86E75 /* Parse_ChatUITestsLaunchTests.m */; };
+		1A87D498286A1DA2005314D1 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A87D497286A1DA2005314D1 /* ChatViewController.m */; };
+		1A87D49B286A234E005314D1 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A87D49A286A234E005314D1 /* ChatCell.m */; };
 		D2196A02FF03ED00A2A3E50A /* Pods_Parse_ChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8EE5A2D5AB552B5EC93D28 /* Pods_Parse_ChatTests.framework */; };
 		D9F602A5DF4D2EE9270FC28D /* Pods_Parse_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC43C1601318C9439625202 /* Pods_Parse_Chat.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,10 @@
 		1A122C16286A0FDD00C86E75 /* Parse ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parse ChatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A122C1A286A0FDD00C86E75 /* Parse_ChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parse_ChatUITests.m; sourceTree = "<group>"; };
 		1A122C1C286A0FDD00C86E75 /* Parse_ChatUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parse_ChatUITestsLaunchTests.m; sourceTree = "<group>"; };
+		1A87D496286A1DA2005314D1 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		1A87D497286A1DA2005314D1 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		1A87D499286A234E005314D1 /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		1A87D49A286A234E005314D1 /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		31836BC33CD4A980804B446B /* Pods-Parse Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse Chat.release.xcconfig"; path = "Target Support Files/Pods-Parse Chat/Pods-Parse Chat.release.xcconfig"; sourceTree = "<group>"; };
 		4DC43C1601318C9439625202 /* Pods_Parse_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		579FC79C914667E7956FC3D1 /* Pods-Parse ChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse ChatTests.release.xcconfig"; path = "Target Support Files/Pods-Parse ChatTests/Pods-Parse ChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 				1A122C02286A0FDC00C86E75 /* LaunchScreen.storyboard */,
 				1A122C05286A0FDC00C86E75 /* Info.plist */,
 				1A122C06286A0FDC00C86E75 /* main.m */,
+				1A87D496286A1DA2005314D1 /* ChatViewController.h */,
+				1A87D497286A1DA2005314D1 /* ChatViewController.m */,
+				1A87D499286A234E005314D1 /* ChatCell.h */,
+				1A87D49A286A234E005314D1 /* ChatCell.m */,
 			);
 			path = "Parse Chat";
 			sourceTree = "<group>";
@@ -416,6 +426,8 @@
 			files = (
 				1A122BFC286A0FDB00C86E75 /* LoginViewController.m in Sources */,
 				1A122BF6286A0FDB00C86E75 /* AppDelegate.m in Sources */,
+				1A87D498286A1DA2005314D1 /* ChatViewController.m in Sources */,
+				1A87D49B286A234E005314D1 /* ChatCell.m in Sources */,
 				1A122C07286A0FDC00C86E75 /* main.m in Sources */,
 				1A122BF9286A0FDB00C86E75 /* SceneDelegate.m in Sources */,
 			);

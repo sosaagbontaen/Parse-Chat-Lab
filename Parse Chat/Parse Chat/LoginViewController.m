@@ -20,15 +20,15 @@
 @implementation ViewController
 - (IBAction)registerUser:(id)sender {
     if ([self.usernameTextField.text isEqual:@""] && [self.passwordTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid username and password" messageLabel:@"Username and password fields are empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid username and password" messageLabel:@"Username and password fields are empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     else if ([self.usernameTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid username" messageLabel:@"Username field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid username" messageLabel:@"Username field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     else if ([self.passwordTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid password" messageLabel:@"Password field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid password" messageLabel:@"Password field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     
@@ -45,20 +45,21 @@
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"User registered successfully");
+            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
         }
     }];
 }
 - (IBAction)loginUser:(id)sender {
     if ([self.usernameTextField.text isEqual:@""] && [self.passwordTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid username and password" messageLabel:@"Username and password fields are empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid username and password" messageLabel:@"Username and password fields are empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     else if ([self.usernameTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid username" messageLabel:@"Username field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid username" messageLabel:@"Username field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     else if ([self.passwordTextField.text isEqual:@""]){
-        [self loginAlert:@"Invalid password" messageLabel:@"Password field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
+        [self alert:@"Invalid password" messageLabel:@"Password field is empty" leftLabel:@"Cancel" rightLabel:@"OK"];
         return;
     }
     
@@ -71,13 +72,14 @@
                 NSLog(@"User log in failed: %@", error.localizedDescription);
             } else {
                 NSLog(@"User logged in successfully");
+                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
                 
                 // display view controller that needs to shown after successful login
             }
         }];
 }
 
-- (void)loginAlert:(NSString *)titleLabel messageLabel:(NSString *)messageLabel leftLabel: (NSString *)leftLabel rightLabel: (NSString *)rightLabel{
+- (void)alert:(NSString *)titleLabel messageLabel:(NSString *)messageLabel leftLabel: (NSString *)leftLabel rightLabel: (NSString *)rightLabel{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:titleLabel
                                                                                message:messageLabel
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];
@@ -103,6 +105,5 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
 
 @end
